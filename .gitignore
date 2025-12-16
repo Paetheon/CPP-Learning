@@ -1,0 +1,22 @@
+# Compiled Object files
+*.o
+*.obj
+
+# Executables
+*.exe
+a.out
+*.out
+
+# VS Code specific files (generally safe to ignore personal settings)
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/*.log
+
+# Operating System generated files
+.DS_Store
+Thumbs.db
+
+# --- My Custom Ignored Folders ---
+Test folder/
+Practice CPP via AI Guidance/
