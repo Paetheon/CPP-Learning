@@ -21,8 +21,18 @@ char getMathematicalOperator() {
     return symbol;
 }
 
-//Department: Logic
-int calculateResult(int e1, int e2, char op) {
+//Department: Logic --> Tested( both '+' & '-' are working )
+int calculateResult(int e1, int e2, char os) {
+
+    if (os == '+') {
+
+        return e1 + e2;
+    }
+    else if (os == '-') {
+        return e1 - e2;
+    }
+
+     std::cout << "Error: Invalid operator entered." << '\n';
 
     return 0;
 }
@@ -35,9 +45,17 @@ void printResult(int finalValue) {
 
 int main() {
 
-    char symbol = getMathematicalOperator();
 
-    std::cout << "Test result of getUserInput: " << symbol << "\n";
+   // Testing the calculateResult function
+     // FIX: Pass THREE arguments: 10, 5, and '-'
+    int finalValue = calculateResult(10, 5, '-'); 
+
+    // Test the identifier 'finalValue'
+    if (finalValue == 15) {
+        std::cout << "Test Passed!" << std::endl;
+    } else {
+        std::cout << "Test Failed. Expected 15, got " << finalValue << std::endl;
+    }
 
     return 0;
 }
