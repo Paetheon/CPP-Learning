@@ -1,6 +1,6 @@
 #include <iostream>
 
-//Department: Input for user --> Tested
+
 int getUserInput() {
 
     std::cout << "Enter a number. ";
@@ -10,7 +10,7 @@ int getUserInput() {
     return input;
 }
 
-//Department: Input for math symbol --> Tested
+
 char getMathematicalOperator() {
 
     std::cout << "Is the number + or - ? \n";
@@ -21,7 +21,7 @@ char getMathematicalOperator() {
     return symbol;
 }
 
-//Department: Logic --> Tested( both '+' & '-' are working )
+
 int calculateResult(int e1, int e2, char os) {
 
     if (os == '+') {
@@ -37,25 +37,21 @@ int calculateResult(int e1, int e2, char os) {
     return 0;
 }
 
-//Department:output
+
 void printResult(int finalValue) {
 
-    //void does not need a function
+  std::cout << "The final calculation is: " << finalValue << std::endl;
 }
 
 int main() {
 
+    int  e1 = getUserInput();
+    int  e2 = getUserInput();
+    char os = getMathematicalOperator();
+    
+    int result = calculateResult(e1, e2, os);
 
-   // Testing the calculateResult function
-     // FIX: Pass THREE arguments: 10, 5, and '-'
-    int finalValue = calculateResult(10, 5, '-'); 
-
-    // Test the identifier 'finalValue'
-    if (finalValue == 15) {
-        std::cout << "Test Passed!" << std::endl;
-    } else {
-        std::cout << "Test Failed. Expected 15, got " << finalValue << std::endl;
-    }
+    printResult(result);
 
     return 0;
 }
