@@ -1,16 +1,24 @@
 #include <iostream>
 
-//Department: Input for numbers
+//Department: Input for user --> Tested
 int getUserInput() {
 
-    return 0;
+    std::cout << "Enter a number. ";
+    int input{};
+    std::cin >> input;
+
+    return input;
 }
 
-//Department: Input for math symbol
+//Department: Input for math symbol --> Tested
 char getMathematicalOperator() {
 
+    std::cout << "Is the number + or - ? \n";
+    char symbol{};
+    std::cin >> symbol;
 
-    return '+';
+
+    return symbol;
 }
 
 //Department: Logic
@@ -27,6 +35,9 @@ void printResult(int finalValue) {
 
 int main() {
 
-    //assembly
+    char symbol = getMathematicalOperator();
+
+    std::cout << "Test result of getUserInput: " << symbol << "\n";
+
     return 0;
 }
